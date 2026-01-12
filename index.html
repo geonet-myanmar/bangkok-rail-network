@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thailand Public Train Stations (Bangkok Area)</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <header class="sidebar__header">
+          <h1 class="title">Bangkok Rail Stations</h1>
+          <p class="subtitle">Data: Gusb3ll/thailand-public-train-data (CC0)</p>
+        </header>
+
+        <section class="panel">
+          <label class="label" for="search">Search stations</label>
+          <div class="row">
+            <input
+              id="search"
+              class="input"
+              type="search"
+              placeholder="Name (EN/TH) or station ID"
+              autocomplete="off"
+            />
+            <button id="clear" class="btn" type="button">Clear</button>
+          </div>
+          <div id="results" class="results" aria-live="polite"></div>
+        </section>
+
+        <section class="panel">
+          <div class="row row--space">
+            <div>
+              <div class="label">Lines</div>
+              <div id="summary" class="muted">Loading…</div>
+            </div>
+            <button id="showAll" class="btn" type="button">Show all</button>
+          </div>
+          <div id="lineFilters" class="filters"></div>
+        </section>
+
+        <footer class="sidebar__footer">
+          <div class="muted">
+            Tip: run a local server (not file://) so `fetch()` works.
+          </div>
+        </footer>
+      </aside>
+
+      <main class="map-wrap">
+        <div id="map" class="map" role="application" aria-label="Map"></div>
+      </main>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
