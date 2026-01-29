@@ -16,7 +16,8 @@ A lightweight static web map that visualizes Bangkok-area public train stations 
 
 ## Author
 
-**geonet-myanmar** - Maintained and developed by the GeoNet Myanmar community.
+**Geonet Myanmar** 
+Email: geonet.myanmar@gmail.com
 
 ## Project Structure
 
